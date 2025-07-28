@@ -15,7 +15,7 @@ const path = require('path');
 const router = express.Router();
 
 const DB_PATH = path.join(__dirname, 'data', 'HighwayPlan_data.db');
-const CSV_PATH = path.join(__dirname, 'data', 'downloads', 'eda_current_enact_plan_data_set.csv');
+const CSV_PATH = path.join(__dirname, 'data', 'downloads', 'Current_Enact_Plan_Data_Set.csv');
 
 router.post('/api/update-projects', async (req, res) => {
   console.log('Route hit: /api/update-projects');

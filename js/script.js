@@ -988,7 +988,7 @@ function loadDistrictOptions(controlDiv) {
     }
 
     try {
-        // First, let's check what columns are in KYTC_Districts table
+        // First, check what columns are in KYTC_Districts table
         const columnsStmt = database.prepare("PRAGMA table_info(KYTC_Districts)");
         const columns = [];
         while (columnsStmt.step()) {

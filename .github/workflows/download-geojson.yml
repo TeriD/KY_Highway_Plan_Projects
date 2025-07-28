@@ -1,0 +1,23 @@
+# This workflow runs the download-geojson.js script nightly to update GeoJSON files
+name: Nightly GeoJSON Download
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # Runs every day at 4:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  download-geojson:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies (if needed)
+        run: |
+          if [ -f package.json ]; then npm ci; fi
+      - name: Run download-geojson.js
+        run: node download-geojson.js
