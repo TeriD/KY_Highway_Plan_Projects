@@ -18,7 +18,7 @@ An interactive, open-source web dashboard for visualizing Kentucky highway proje
     - [Project Type Filter](#project-type-filter)
     - [Dynamic Titles](#dynamic-titles)
     - [Dynamic Route Information](#dynamic-route-information)
-  - [Usage Guide](#usage-guide)
+  - [User Guide](#user-guide)
   - [File Structure](#file-structure)
   - [Disclaimer](#disclaimer)
   - [Help \& Support](#help--support)
@@ -28,79 +28,86 @@ An interactive, open-source web dashboard for visualizing Kentucky highway proje
 
 ## Project Overview
 
-The KY Highway Projects Dashboard is a modern, device-responsive web application for exploring current and awarded highway construction projects in Kentucky. It leverages open data, interactive mapping, and dynamic data visualization to provide the public, contractors, and government stakeholders with intuitive access to authoritative project data. The dashboard is built with open web technologies and does not rely on proprietary Esri tools.
+The KY Highway Projects Dashboard is an interactive web app that's designed to be responsive on any device. It helps users navigate through current and awarded highway construction projects in Kentucky. By using open data, interactive mapping, and dynamic data visualization, the dashboard makes it easy for the public, contractors, and government stakeholders to access trustworthy project information. Plus, it’s built with open web technologies, so there’s no need to rely on proprietary Esri tools.
 
 **Purpose:**
-- Enable transparent, public access to Kentucky's highway project data
-- Provide interactive tools for filtering, mapping, and analyzing project information
-- Serve as a demonstration of GIS web development, data visualization, and modular JavaScript architecture
+- To ensure that Kentucky's highway project data is openly accessible and transparent to the public.
+- To offer interactive tools that allow users to filter, map, and analyze project information easily.
+- To showcase the development of GIS web applications, focusing on data visualization and a modular approach to JavaScript architecture.
 
 **Educational/Portfolio Project:**
-This dashboard was developed independently by the author as a learning and demonstration project. See [Disclaimer](#disclaimer) for details.
+I created this dashboard on my own as a way to learn and showcase my skills. For more information, check out the [Disclaimer](#disclaimer) section for details.
 
 ---
 
 ## Features
 
 - **Interactive Map:**
-  - Explore highway projects using a Leaflet.js map with multiple basemap options
-  - Click on project lines to view detailed project information in popups
-  - Zoom and pan to areas of interest
-- **Multi-Level Filtering:**
-  - Filter projects by KYTC district, county, and standardized project type
-  - Search-enabled dropdowns for quick selection
-  - Filters can be combined for granular data exploration
-- **Dynamic Data Visualization:**
-  - Pie chart showing awarded vs. current projects
-  - Horizontal bar chart displaying project distribution by year
-  - Charts update automatically based on active filters
-- **Advanced Data Table:**
-  - Sortable, filterable, and paginated table of project details
-  - Export data as CSV, JSON, or Excel (XLSX)
-- **Basemap Switching:**
-  - Choose from OpenStreetMap, Esri World Street Map, USGS Topo, and OpenTopoMap tiles through Leaflet fetch process
-- **Clear All Filters:**
-  - One-click button to reset all filters and restore the default view
-- **Responsive Design:**
-  - Optimized for desktop and mobile devices
-- **API Integration:**
-  - Integrates with the KYTC Spatial API for route-specific data (see map controls)
-- **Accessible Help & Disclaimer:**
-  - [Help page](help.html) and [Disclaimer](disclaimer.html) included in the project
+  - Discover highway projects through a Leaflet.js map that offers various basemap options.
+  - Click on the project lines to access detailed information in pop-up windows.
+  - Zoom and pan to explore areas that interest you.
 
+- **Multi-Level Filtering:**
+  - Filter projects by KYTC district, county, and standardized project type.
+  - Utilize search-enabled dropdowns for quick and easy selections.
+  - Combine filters for a more detailed exploration of the data.
+
+- **Dynamic Data Visualization:**
+  - View a pie chart comparing awarded projects to current ones.
+  - Check out a horizontal bar chart that shows project distribution over the years.
+  - Charts refresh automatically based on the filters you have applied.
+
+- **Advanced Data Table:**
+  - Access a sortable, filterable, and paginated table containing project details.
+  - Export the data in formats like CSV, JSON, or Excel (XLSX).
+
+- **Basemap Switching:**
+  - Select from basemaps such as OpenStreetMap, Esri World Street Map, USGS Topo, and OpenTopoMap through the Leaflet fetch process.
+
+- **Clear All Filters:**
+  - A one-click button allows you to reset all filters and return to the default view.
+
+- **Responsive Design:**
+  - The interface is optimized for both desktop and mobile devices.
+
+- **API Integration:**
+  - The project integrates with the KYTC Spatial API for route-specific data (accessible via map controls).
+
+- **Accessible Help & Disclaimer:**
+  - The project includes a [Help page](help.html) and a [Disclaimer](disclaimer.html).
 ---
 
 ## Architecture & Technologies
 
 **Frontend:**
-- HTML5, CSS3 (with Bootstrap 5), JavaScript (ES6+)
-- Responsive layout and modular UI components
+- HTML5, CSS3 (utilizing Bootstrap 5), and JavaScript (ES6+)
+- Responsive design with modular UI components
 
 **Mapping & Visualization:**
-- [Leaflet.js](https://leafletjs.com/) for interactive mapping
-- [Chart.js](https://www.chartjs.org/) for charts
-- [Tabulator.js](http://tabulator.info/) for advanced data tables
+- Using [Leaflet.js](https://leafletjs.com/) for interactive maps
+- Implementing [Chart.js](https://www.chartjs.org/) for creating charts
+- Employing [Tabulator.js](http://tabulator.info/) for advanced data tables
 
 **Data Management:**
-- [SQL.js](https://sql.js.org/) for client-side SQLite database operations
-- GeoJSON for spatial data layers (projects, counties, districts)
+- Utilizing [SQL.js](https://sql.js.org/) for client-side SQLite database operations
+- Managing spatial data layers with GeoJSON (projects, counties, districts)
 
 **Other Tools:**
-- [SheetJS](https://sheetjs.com/) for Excel export
-- Node.js/Express for backend data refresh (optional, see `server.js`)
+- Using [SheetJS](https://sheetjs.com/) for exporting to Excel
+- Node.js/Express for optional backend data refresh (see `server.js`) - This is a work in progress.
 
 ---
 
 ## Data Sources
 
-All data used in this dashboard is sourced from **publicly available datasets** provided by the Kentucky Transportation Cabinet (KYTC) and other open government data repositories. No proprietary or confidential information is used.
+All the data utilized in this dashboard comes from **publicly available datasets** provided by the Kentucky Transportation Cabinet (KYTC) and various other open government data repositories. I have ensured that no proprietary or confidential information is included.
 
 **Key Data Files:**
-- `data/Current_Highway_Plans.geojson` — Current highway project lines
-- `data/Awarded_Highway_Plans.geojson` — Awarded project lines
-- `data/KY_Counties.geojson` — County boundaries
-- `data/KYTC_Districts.geojson` — District boundaries
-- `data/HighwayPlan_data.db` — SQLite database with project tables and views
+- `data/Current_Highway_Plans.geojson` — Lines representing current highway projects
+- `data/Awarded_Highway_Plans.geojson` — Lines for highway projects that have been awarded
+- `data/KY_Counties.geojson` — Boundaries of counties in Kentucky
+- `data/KYTC_Districts.geojson` — Boundaries of Kentucky transportation districts
+- `data/HighwayPlan_data.db` — SQLite database with tables and views related to highway projects
 
 **Official KYTC Resources:**
 - [KYTC Website](https://transportation.ky.gov)
@@ -110,60 +117,59 @@ All data used in this dashboard is sourced from **publicly available datasets** 
 
 ## Filtering System
 
-The dashboard provides three levels of filtering, which are currently used independently.  It is a future enhancement to apply their in combinations:
+The dashboard offers three levels of filtering, and right now, they function separately. In the future, I plan to enhance this so they can be used in combination:
 
 ### District Filter
-- Filter by KYTC districts (1-12)
-- Automatically zooms to district boundaries
-- Updates all charts and tables to show district-specific data
+- Allows filtering by KYTC districts (1-12)
+- Automatically zooms in on district boundaries
+- Updates all charts and tables to display data specific to the selected district
 
 ### County Filter
-- Search-enabled dropdown with all Kentucky counties
-- Type to search for specific counties
-- Zooms to county boundaries when selected
+- Features a search-enabled dropdown for all Kentucky counties
+- Users can type to find specific counties quickly
+- Zooms in on county boundaries upon selection
 
 ### Project Type Filter
-- Intelligent categorization using a crosswalk database
+- Uses intelligent categorization through a crosswalk database
 - Maps raw project types to standardized categories
-- Search functionality to quickly find project types
-- Visual indicator shows active filter
+- Includes a search function to easily find project types
+- Displays a visual indicator to show which filter is active
 
 ### Dynamic Titles
-- Panel titles automatically update to reflect active filters
-- Examples:
+- Panel titles update automatically to reflect the active filters
+- For example:
   - "Projects in District 2"
   - "Projects in Fayette County"
   - "Projects in District 7 in Fayette County (Bridge Construction)"
-- Clear visual feedback about what data is being displayed
+- This provides clear visual feedback on the data being displayed
 
 ### Dynamic Route Information
-- Search for route information by selecting a specific project geograhic feature
-  - Zoom into the map by double-clicking or using the zoom and pan
-  - Select a desired route
+- Users can search for route information by selecting a specific project geographic feature
+  - Zoom into the map by double-clicking or using the zoom and pan options
+  - Choose the desired route
   - Send the API call
-  - Data is returned and can be copied or printed for later use.
-
+  - The data will be returned and can be copied or printed for later reference.
 ---
 
-## Usage Guide
+## User Guide
 
-1. **Open the dashboard** in a web browser (see `index.html`)
-2. While the database should load on page initiation, there is also a **"Load Database"** button to load the highway project data, if needed.
-3. Change BaseMap options
-   - allows the use to select one of four pre-selected basemaps for map display.
-4. Use the filter controls in the top-right side:
-   - **Clear All** (CLR button): Reset all active filters at once
-   - **County Filter** (house icon): Search and filter by county name
-   - **District Filter** (map icon): Filter by KYTC district (1-12)
-   -  **Project Type Filter** (road icon): Filter by standardized project categories
-   -  **Search for Route Information** (road )
-5. **Panel titles automatically update** to show active filters (e.g., "Projects in District 7")
-6. **Click on highway project lines** (colored lines on map) to view detailed project information in a popup (this is a work-in-progress)
-7. Use the table's built-in sorting and filtering capabilities
-8. **Export data** using the CSV, JSON, or Excel buttons
-9.  **Switch basemaps** using the map control in the top-right corner
-10. **Charts and data** automatically update based on selected filters
-11. For more details, see the [Help page](help.html)
+1. **Access the dashboard** through your web browser (check out `index.html`).
+2. The database should automatically load when you open the page, but if it doesn't, you can click the **"Load Database"** button to get the highway project data.
+3. You can change the BaseMap options:
+   - Choose from four pre-selected basemaps for better map visualization.
+4. Use the filter controls located in the top-right corner:
+   - **Clear All** (CLR button): This resets all active filters simultaneously.
+   - **County Filter** (house icon): Search and filter projects by county name.
+   - **District Filter** (map icon): Filter projects by KYTC district (1-12).
+   - **Project Type Filter** (road icon): Narrow down by standardized project categories.
+   - **Search for Route Information** (road icon).
+5. **Panel titles will update automatically** to reflect any active filters (e.g., "Projects in District 7").
+6. **Click on highway project lines** (the colored lines on the map) to view detailed information in a popup (note that this feature is still being developed).
+7. Utilize the table’s built-in sorting and filtering features.
+8. **Export data** using the buttons for CSV, JSON, or Excel formats.
+9. **Switch basemaps** with the map control located in the top-right corner.
+10. **Charts and data** will automatically refresh based on the filters you select.
+11. For further information, refer to the [Help page](help.html).
 
 ---
 
@@ -201,20 +207,20 @@ The dashboard provides three levels of filtering, which are currently used indep
 
 ## Disclaimer
 
-This dashboard is an **independent software development project** created by the developer in their personal capacity. It is **not commissioned, directed, or endorsed** by the Kentucky Transportation Cabinet (KYTC) or any of its departments. All data is sourced from **publicly available datasets**. For official information, visit the [KYTC website](https://transportation.ky.gov).
+This dashboard is an independent software development project that I created on my own. It is not commissioned, directed, or endorsed by the Kentucky Transportation Cabinet (KYTC) or any of its departments. All data used here comes from publicly available datasets. For official information, check out the [KYTC website](https://transportation.ky.gov).
 
-See the full [Disclaimer](disclaimer.html) for details on data sources, liability, and project purpose.
+You can read the complete [Disclaimer](disclaimer.html) for more details on data sources, liability, and the project's purpose.
 
 ---
 
 ## Help & Support
 
-For usage instructions, see the [Help page](help.html).
+If you need usage instructions, check out the [Help page](help.html).
 
-For questions about this independent project, contact the developer directly. For official KYTC highway project information, contact the Kentucky Transportation Cabinet through their official channels.
+For any questions about this independent project, feel free to reach out to me directly through Slack. For official information regarding KYTC highway projects, please contact the Kentucky Transportation Cabinet through their designated channels.
 
 ---
 
 ## License
 
-This project is for educational and demonstration purposes only. No warranty is provided.
+This project is meant solely for educational and demonstration purposes. There are no warranties provided.
