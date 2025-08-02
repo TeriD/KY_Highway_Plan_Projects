@@ -55,8 +55,20 @@ I created this dashboard on my own as a way to learn and showcase my skills. For
   - The project includes a [Help page](help.html) and a [Disclaimer](disclaimer.html).
 ---
 
-## Architecture & Technologies
+## Live Demo
+Visit the dashboard at: https://terid.github.io/KY_Highway_Plan_Projects/
 
+---
+
+## Dashboard Interface
+
+![KY Highway Projects Dashboard Interface](images/thumbnail_600x400.png)
+
+*The interactive dashboard showing Kentucky highway projects with filtering controls, interactive map, charts, and data table.*
+
+---
+
+## Architecture & Technologies
 **Frontend:**
 - HTML5, CSS3 (utilizing Bootstrap 5), and JavaScript (ES6+)
 - Responsive design with modular UI components
@@ -69,10 +81,6 @@ I created this dashboard on my own as a way to learn and showcase my skills. For
 **Data Management:**
 - Utilizing [SQL.js](https://sql.js.org/) for client-side SQLite database operations
 - Managing spatial data layers with GeoJSON (projects, counties, districts)
-
-**Other Tools:**
-- Using [SheetJS](https://sheetjs.com/) for exporting to Excel
-- Node.js/Express for optional backend data refresh (see `server.js`) - This is a work in progress.
 
 ---
 
@@ -149,6 +157,7 @@ The dashboard offers three levels of filtering, and right now, they function sep
 9.  **Switch basemaps** with the map control located in the top-right corner.
 10. **Charts and data** will automatically refresh based on the filters you select.
 11. For further information, refer to the [Help page](help.html).
+
 
 ---
 
