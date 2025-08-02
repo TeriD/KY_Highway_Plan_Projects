@@ -1,42 +1,20 @@
 # KY Highway Projects Dashboard
 
-An interactive, open-source web dashboard for visualizing Kentucky highway project data, featuring advanced filtering, mapping, and data export capabilities. This project is designed for educational and portfolio purposes and is not officially endorsed by the Kentucky Transportation Cabinet (KYTC).
-
----
-
-## Table of Contents
-
-- [KY Highway Projects Dashboard](#ky-highway-projects-dashboard)
-  - [Table of Contents](#table-of-contents)
-  - [Project Overview](#project-overview)
-  - [Features](#features)
-  - [Architecture \& Technologies](#architecture--technologies)
-  - [Data Sources](#data-sources)
-  - [Filtering System](#filtering-system)
-    - [District Filter](#district-filter)
-    - [County Filter](#county-filter)
-    - [Project Type Filter](#project-type-filter)
-    - [Dynamic Titles](#dynamic-titles)
-    - [Dynamic Route Information](#dynamic-route-information)
-  - [User Guide](#user-guide)
-  - [File Structure](#file-structure)
-  - [Disclaimer](#disclaimer)
-  - [Help \& Support](#help--support)
-  - [License](#license)
+An interactive web dashboard for visualizing Kentucky highway project data, featuring a geospatial map with filtering capabilities, automatic graph updates tied to the map extent, and a tabular representation of the project data, with export capabilities. This project is designed for educational and portfolio purposes and is not officially endorsed by the Kentucky Transportation Cabinet (KYTC).
 
 ---
 
 ## Project Overview
 
-The KY Highway Projects Dashboard is an interactive web app that's designed to be responsive on any device. It helps users navigate through current and awarded highway construction projects in Kentucky. By using open data, interactive mapping, and dynamic data visualization, the dashboard makes it easy for the public, contractors, and government stakeholders to access trustworthy project information. Plus, it’s built with open web technologies, so there’s no need to rely on proprietary Esri tools.
+The KY Highway Projects Dashboard is an interactive web app that's designed to be responsive on any device. It helps interested users navigate through current and awarded highway construction projects in Kentucky. By using open data, interactive mapping, and dynamic data visualization, the dashboard makes it easy for the public, contractors, and government stakeholders to access trustworthy project information. Plus, it’s built with open web technologies, so there’s no need to rely on proprietary Esri tools.
 
 **Purpose:**
-- To ensure that Kentucky's highway project data is openly accessible and transparent to the public.
+- To ensure that Kentucky's highway project data is openly accessible to the public.
 - To offer interactive tools that allow users to filter, map, and analyze project information easily.
-- To showcase the development of GIS web applications, focusing on data visualization and a modular approach to JavaScript architecture.
+- To showcase the development of GIS web applications, focusing on data visualization and JavaScript architecture.
 
 **Educational/Portfolio Project:**
-I created this dashboard on my own as a way to learn and showcase my skills. For more information, check out the [Disclaimer](#disclaimer) section for details.
+I created this dashboard on my own as a way to learn and showcase my skills. For more information, read the [Disclaimer](#disclaimer) section for details.
 
 ---
 
@@ -103,8 +81,8 @@ I created this dashboard on my own as a way to learn and showcase my skills. For
 All the data utilized in this dashboard comes from **publicly available datasets** provided by the Kentucky Transportation Cabinet (KYTC) and various other open government data repositories. I have ensured that no proprietary or confidential information is included.
 
 **Key Data Files:**
-- `data/Current_Highway_Plans.geojson` — Lines representing current highway projects
-- `data/Awarded_Highway_Plans.geojson` — Lines for highway projects that have been awarded
+- `data/Current_Highway_Plans.geojson` — Georeferenced lines representing current highway projects
+- `data/Awarded_Highway_Plans.geojson` — Georeferenced lines for highway projects that have been awarded
 - `data/KY_Counties.geojson` — Boundaries of counties in Kentucky
 - `data/KYTC_Districts.geojson` — Boundaries of Kentucky transportation districts
 - `data/HighwayPlan_data.db` — SQLite database with tables and views related to highway projects
@@ -154,7 +132,8 @@ The dashboard offers three levels of filtering, and right now, they function sep
 ## User Guide
 
 1. **Access the dashboard** through your web browser (check out `index.html`).
-2. The database should automatically load when you open the page, but if it doesn't, you can click the **"Load Database"** button to get the highway project data.
+2. The database should automatically load when you open the page, but if it doesn't, you can click the **"Load Database"**
+   button to get the highway project data.
 3. You can change the BaseMap options:
    - Choose from four pre-selected basemaps for better map visualization.
 4. Use the filter controls located in the top-right corner:
@@ -167,7 +146,7 @@ The dashboard offers three levels of filtering, and right now, they function sep
 6. **Click on highway project lines** (the colored lines on the map) to view detailed information in a popup (note that this feature is still being developed).
 7. Utilize the table’s built-in sorting and filtering features.
 8. **Export data** using the buttons for CSV, JSON, or Excel formats.
-9. **Switch basemaps** with the map control located in the top-right corner.
+9.  **Switch basemaps** with the map control located in the top-right corner.
 10. **Charts and data** will automatically refresh based on the filters you select.
 11. For further information, refer to the [Help page](help.html).
 
@@ -186,21 +165,15 @@ The dashboard offers three levels of filtering, and right now, they function sep
 │   └── downloads/            # Downloaded data files
 ├── images/                   # Reference images, icons, and wireframes
 ├── js/
-│   ├── download.js           # Data download logic
+│   ├── download.js           # Data download logic (work-in-progress)
 │   ├── script.js             # Main application logic
-│   └── updateProjectsRoute.js # Node.js Express route handler
 ├── References/               # Supporting documentation
 │   └── CapstoneProjectPlan.pdf
-├── download-geojson.js       # Node.js script for GeoJSON downloads
 ├── download.html             # Data refresh options page
 ├── help.html                 # User help page
 ├── disclaimer.html           # Project disclaimer page
 ├── index.html                # Main dashboard page
-├── package.json              # Node.js project metadata and dependencies
-├── package-lock.json         # Exact versions of installed dependencies
 ├── README.md                 # Project overview and documentation
-├── requirements.txt          # (Legacy) Python/Node.js requirements
-├── server.js                 # Node.js web server (optional)
 ```
 
 ---
@@ -209,15 +182,15 @@ The dashboard offers three levels of filtering, and right now, they function sep
 
 This dashboard is an independent software development project that I created on my own. It is not commissioned, directed, or endorsed by the Kentucky Transportation Cabinet (KYTC) or any of its departments. All data used here comes from publicly available datasets. For official information, check out the [KYTC website](https://transportation.ky.gov).
 
-You can read the complete [Disclaimer](disclaimer.html) for more details on data sources, liability, and the project's purpose.
+You can read the full [Disclaimer](disclaimer.html) for more details on data sources, liability, and the project's purpose.
 
 ---
 
 ## Help & Support
 
-If you need usage instructions, check out the [Help page](help.html).
+If you need usage instructions, read the [Help page](help.html).
 
-For any questions about this independent project, feel free to reach out to me directly through Slack. For official information regarding KYTC highway projects, please contact the Kentucky Transportation Cabinet through their designated channels.
+For any questions about this independent project, feel free to reach out to me directly through Slack, LinkedIn or GitHub. For official information regarding KYTC highway projects, please contact the Kentucky Transportation Cabinet through their designated channels.
 
 ---
 
